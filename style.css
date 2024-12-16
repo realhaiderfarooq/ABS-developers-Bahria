@@ -1,0 +1,136 @@
+/* CSS Code */
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+    }
+    .swiper-pagination-bullet {
+    background: #4f46e5;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* /* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.about {
+  width: 100%;
+  max-width: 1130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows stacking for smaller screens */
+}
+
+.pic {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px; /* Add spacing for stacked layout */
+}
+
+.text {
+  width: 100%;
+  max-width: 540px;
+  text-align: center; /* Center align text for smaller screens */
+}
+
+.text h2 {
+  color: #333;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text h5 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #d9bb66;
+}
+#color-text{
+  color: #d9bb66;
+}
+
+.text p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+.hire {
+  font-size: 18px;
+  background: #d9bb66;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.hire:hover {
+  background: #d9bb66;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack the content vertically */
+  }
+
+  .text h2 {
+    font-size: 40px; /* Reduce font size */
+  }
+
+  .text h5 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h2 {
+    font-size: 30px;
+  }
+
+  .hire {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+#text-color{
+  color: #d9bb66  ;
+}
