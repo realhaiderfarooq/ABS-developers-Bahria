@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom Confetti Animation */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #ff0;
+      opacity: 0.8;
+      border-radius: 50%;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) translateX(calc(100vw - 50%)) rotate(720deg);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 h-screen flex items-center justify-center overflow-hidden relative">
+
+  <!-- Centered Thank You Message -->
+  <div class="text-center z-10">
+    <h1 class="text-6xl font-bold text-gray-800">Thank You!</h1>
+    <p class="text-lg text-gray-600 mt-4">We appreciate your submission.</p>
+  </div>
+
+  <!-- Confetti Elements -->
+  <script>
+    const confettiColors = ["#FF5733", "#33FF57", "#5733FF", "#FFD700", "#00CFFF", "#FF69B4"];
+    const confettiCount = 50; // Number of confetti pieces
+
+    for (let i = 0; i < confettiCount; i++) {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+      confetti.style.left = Math.random() * 50 + "%"; // Starts confetti from left and right
+      confetti.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random fall duration
+      confetti.style.animationDelay = Math.random() * 2 + "s";
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
