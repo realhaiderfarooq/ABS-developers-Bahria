@@ -9,6 +9,7 @@
     /* Custom Confetti Animation */
     .confetti {
       position: fixed;
+      top: 0;
       width: 10px;
       height: 10px;
       background-color: #ff0;
@@ -19,10 +20,12 @@
 
     @keyframes fall {
       0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
+        transform: translateY(0);
+        opacity: 1;
       }
       100% {
-        transform: translateY(100vh) translateX(calc(100vw - 50%)) rotate(720deg);
+        transform: translateY(100vh);
+        opacity: 0;
       }
     }
   </style>
@@ -38,15 +41,15 @@
   <!-- Confetti Elements -->
   <script>
     const confettiColors = ["#FF5733", "#33FF57", "#5733FF", "#FFD700", "#00CFFF", "#FF69B4"];
-    const confettiCount = 50; // Number of confetti pieces
+    const confettiCount = 100; // Number of confetti pieces
 
     for (let i = 0; i < confettiCount; i++) {
       const confetti = document.createElement("div");
       confetti.classList.add("confetti");
       confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-      confetti.style.left = Math.random() * 50 + "%"; // Starts confetti from left and right
+      confetti.style.left = Math.random() * 100 + "vw"; // Spread confetti horizontally across the screen
       confetti.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random fall duration
-      confetti.style.animationDelay = Math.random() * 2 + "s";
+      confetti.style.animationDelay = Math.random() * 2 + "s"; // Staggered animations
       document.body.appendChild(confetti);
     }
   </script>
